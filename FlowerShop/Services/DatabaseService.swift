@@ -22,6 +22,10 @@ class DatabaseService {
         return db.collection("orders")
     }
     
+    private var productsRef: CollectionReference {
+        return db.collection("products")
+    }
+    
     private init() { }
     
     func getPositions(by orderID: String, completion: @escaping (Result<[Position], Error>) -> ()) {
@@ -111,8 +115,8 @@ class DatabaseService {
         }
     }
     
-    func getProfile(completion: @escaping (Result<NUser, Error>) -> ()) {
-        usersRef.document(AuthService.shared.currentUser!.uid).getDocument { docSnapshot, error in
+    func getProfile(by userID: String? = nil, completion: @escaping (Result<NUser, Error>) -> ()) {
+        usersRef.document(userID != nil ? userID! : AuthService.shared.currentUser!.uid).getDocument { docSnapshot, error in
             
             guard let snap = docSnapshot else { return }
             guard let data = snap.data() else { return }
@@ -125,6 +129,29 @@ class DatabaseService {
             
             completion(.success(user))
         }
+    }
+    
+    func setProduct(product: Product, image: Data, completion: @escaping (Result<Product, Error>) -> ()) {
+        
+        StorageService.shared.upload(id: product.id, image: image) { result in
+            switch result { 
+            case .success(let sizeInfo):
+                print(sizeInfo)
+                self.productsRef.document(product.id).setData(product.representation) { error in
+                    if let error = error {
+                        completion(.failure(error))
+                    } else {
+                        completion(.success(product))
+                    }
+                }
+                
+            case .failure(let error):
+                completion(.failure(error))
+            }
+        }
+    }
+    func getProducts(completion: @escaping (Result<[Product], Error>) -> ()) {
+        
     }
 }
 

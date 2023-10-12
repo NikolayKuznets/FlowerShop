@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		210286DB2AD7FBEE00BC092B /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 210286DA2AD7FBEE00BC092B /* StorageService.swift */; };
 		213E9D362ACEBD9F00630E3B /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213E9D352ACEBD9F00630E3B /* CatalogView.swift */; };
 		213E9D382ACEBE2200630E3B /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213E9D372ACEBE2200630E3B /* CartView.swift */; };
 		213E9D3A2ACEBE5100630E3B /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213E9D392ACEBE5100630E3B /* ProfileView.swift */; };
@@ -18,6 +19,10 @@
 		213E9D4E2ACFEFF800630E3B /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213E9D4D2ACFEFF800630E3B /* CartViewModel.swift */; };
 		213E9D502ACFF03A00630E3B /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213E9D4F2ACFF03A00630E3B /* Position.swift */; };
 		213E9D522ACFFFE800630E3B /* PositionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 213E9D512ACFFFE800630E3B /* PositionCell.swift */; };
+		2161D1DC2AD7E837009243CF /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161D1DB2AD7E837009243CF /* ImagePicker.swift */; };
+		2161D1DE2AD7EBEF009243CF /* AddProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2161D1DD2AD7EBEF009243CF /* AddProductView.swift */; };
+		218D9C922AD6B34A00DAC139 /* OrderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D9C912AD6B34A00DAC139 /* OrderView.swift */; };
+		218D9C942AD6B36E00DAC139 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218D9C932AD6B36E00DAC139 /* OrderViewModel.swift */; };
 		218EA80E2ACE8857006A64E4 /* FlowerShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218EA80D2ACE8857006A64E4 /* FlowerShopApp.swift */; };
 		218EA8102ACE8857006A64E4 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 218EA80F2ACE8857006A64E4 /* AuthView.swift */; };
 		218EA8122ACE885F006A64E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 218EA8112ACE885F006A64E4 /* Assets.xcassets */; };
@@ -40,6 +45,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		210286DA2AD7FBEE00BC092B /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
 		213E9D352ACEBD9F00630E3B /* CatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
 		213E9D372ACEBE2200630E3B /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
 		213E9D392ACEBE5100630E3B /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -51,6 +57,11 @@
 		213E9D4D2ACFEFF800630E3B /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		213E9D4F2ACFF03A00630E3B /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		213E9D512ACFFFE800630E3B /* PositionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCell.swift; sourceTree = "<group>"; };
+		2161D1DA2AD7E7A8009243CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		2161D1DB2AD7E837009243CF /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		2161D1DD2AD7EBEF009243CF /* AddProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductView.swift; sourceTree = "<group>"; };
+		218D9C912AD6B34A00DAC139 /* OrderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderView.swift; sourceTree = "<group>"; };
+		218D9C932AD6B36E00DAC139 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 		218EA80A2ACE8857006A64E4 /* FlowerShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlowerShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		218EA80D2ACE8857006A64E4 /* FlowerShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowerShopApp.swift; sourceTree = "<group>"; };
 		218EA80F2ACE8857006A64E4 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
@@ -105,6 +116,7 @@
 				213E9D402ACEC73000630E3B /* ProductCell.swift */,
 				213E9D512ACFFFE800630E3B /* PositionCell.swift */,
 				21A95B262AD5550E005F0177 /* OrderCell.swift */,
+				2161D1DB2AD7E837009243CF /* ImagePicker.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -130,6 +142,7 @@
 				213E9D4D2ACFEFF800630E3B /* CartViewModel.swift */,
 				21C979322AD3FF87008F7193 /* MainTabBarViewModel.swift */,
 				21A95B202AD5208B005F0177 /* ProfileViewModel.swift */,
+				218D9C932AD6B36E00DAC139 /* OrderViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -153,6 +166,7 @@
 		218EA80C2ACE8857006A64E4 /* FlowerShop */ = {
 			isa = PBXGroup;
 			children = (
+				2161D1DA2AD7E7A8009243CF /* Info.plist */,
 				218EA80D2ACE8857006A64E4 /* FlowerShopApp.swift */,
 				21C979312AD3E1B6008F7193 /* Services */,
 				213E9D432ACED49700630E3B /* Model */,
@@ -178,6 +192,7 @@
 			children = (
 				21C9792F2AD3E1A9008F7193 /* AuthService.swift */,
 				21C979362AD403F1008F7193 /* DatabaseService.swift */,
+				210286DA2AD7FBEE00BC092B /* StorageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -186,6 +201,8 @@
 			isa = PBXGroup;
 			children = (
 				21D3E3772AD67C4F00E6282A /* AdminOrdersView.swift */,
+				218D9C912AD6B34A00DAC139 /* OrderView.swift */,
+				2161D1DD2AD7EBEF009243CF /* AddProductView.swift */,
 			);
 			path = AdminInterface;
 			sourceTree = "<group>";
@@ -272,6 +289,7 @@
 				21C979372AD403F1008F7193 /* DatabaseService.swift in Sources */,
 				21D3E37B2AD67E5C00E6282A /* AdminOrdersViewModel.swift in Sources */,
 				21A95B212AD5208B005F0177 /* ProfileViewModel.swift in Sources */,
+				2161D1DC2AD7E837009243CF /* ImagePicker.swift in Sources */,
 				21A95B232AD52FF8005F0177 /* Order.swift in Sources */,
 				213E9D4E2ACFEFF800630E3B /* CartViewModel.swift in Sources */,
 				21C979332AD3FF87008F7193 /* MainTabBarViewModel.swift in Sources */,
@@ -284,13 +302,17 @@
 				21D3E3782AD67C4F00E6282A /* AdminOrdersView.swift in Sources */,
 				213E9D4C2ACFE0CF00630E3B /* ProductDetailViewModel.swift in Sources */,
 				21A95B272AD5550E005F0177 /* OrderCell.swift in Sources */,
+				2161D1DE2AD7EBEF009243CF /* AddProductView.swift in Sources */,
+				210286DB2AD7FBEE00BC092B /* StorageService.swift in Sources */,
 				21A95B252AD547B7005F0177 /* OrderStatus.swift in Sources */,
 				21C979352AD40220008F7193 /* NUser.swift in Sources */,
 				213E9D502ACFF03A00630E3B /* Position.swift in Sources */,
 				213E9D3A2ACEBE5100630E3B /* ProfileView.swift in Sources */,
+				218D9C922AD6B34A00DAC139 /* OrderView.swift in Sources */,
 				213E9D412ACEC73000630E3B /* ProductCell.swift in Sources */,
 				213E9D362ACEBD9F00630E3B /* CatalogView.swift in Sources */,
 				21C979302AD3E1AA008F7193 /* AuthService.swift in Sources */,
+				218D9C942AD6B36E00DAC139 /* OrderViewModel.swift in Sources */,
 				213E9D3D2ACEC60F00630E3B /* Product.swift in Sources */,
 				213E9D452ACED4D800630E3B /* CatalogViewModel.swift in Sources */,
 			);
@@ -424,6 +446,9 @@
 				DEVELOPMENT_TEAM = B2KDHW7R39;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FlowerShop/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Разрешить использовать камеру?";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Разрешить использовать галерею для выбора фото?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -453,6 +478,9 @@
 				DEVELOPMENT_TEAM = B2KDHW7R39;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FlowerShop/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Разрешить использовать камеру?";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Разрешить использовать галерею для выбора фото?";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -46,6 +46,10 @@ class AuthService {
         }
     }
     
+    func signOut() {
+        try! auth.signOut()
+    }
+    
     func signIn(email: String,
                 password: String,
                 completion: @escaping (Result<User, Error>) -> ()) {
