@@ -12,6 +12,8 @@ struct CatalogView: View {
     let layoutForPopularsProducts = [GridItem(.adaptive(minimum: screen.width / 2.2))]
     let layoutForFlowers = [GridItem(.adaptive(minimum: screen.width / 2.8))]
     
+    @StateObject var viewModel = CatalogViewModel()
+    
     var body: some View {
         
         ScrollView(.vertical, showsIndicators: false) {
@@ -31,6 +33,8 @@ struct CatalogView: View {
                                     .foregroundColor(.black)
                             }
                         }
+//                        .clipped()
+//                            .frame(height: 200)//
                     }
                     .padding(.bottom, 30)
                 }
@@ -40,22 +44,31 @@ struct CatalogView: View {
                  
                 ScrollView (.vertical, showsIndicators: false){
                     LazyVGrid(columns: layoutForFlowers) {
-                        ForEach(CatalogViewModel.shared.flowers, id: \.id) { item in
+                        ForEach(viewModel.flowers, id: \.id) { item in
                             NavigationLink {
                                 let viewModel = ProductDetailViewModel(product: item)
                                 
                                 ProductDetailView(viewModel: viewModel)
+                                    
                             } label: {
                                 ProductCell(product: item)
                                     .foregroundColor(.black)
                             }
                                 .padding(.top, 70)
                         }
+
+//                        .clipped()
+//                        .frame(height: 200)//
+//                            .scaledToFit()// тут можно писать модификаторы
                     }
                     .padding()
                 }
             }
         }.navigationBarTitle(Text("Каталог"))
+            .onAppear{
+                print("getProducts")
+                self.viewModel.getProducts()
+            }
     }
 }
 

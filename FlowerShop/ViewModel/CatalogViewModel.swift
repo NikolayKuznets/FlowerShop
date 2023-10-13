@@ -34,7 +34,7 @@ class CatalogViewModel: ObservableObject {
                  descript: "Букет из 111 больших пионов")
     ]
     
-    var flowers = [
+   @Published var flowers = [
         Product( id: "6",
                  title: "Лилии", imageURL: "Not found",
                  price: 3500,
@@ -57,4 +57,15 @@ class CatalogViewModel: ObservableObject {
                  descript: "Букет из 111 больших пионов")
     ]
     
+    func getProducts() {
+        DatabaseService.shared.gerProducts { result in
+            switch result {
+                
+            case .success(let products):
+                self.flowers = products
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+    }
 }

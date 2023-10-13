@@ -24,19 +24,23 @@ struct AddProductView: View {
                 .padding(.top)
             Image(uiImage: image)
                 .resizable()
-                .frame(maxWidth: .infinity, minHeight: 300, maxHeight: .infinity)
-                .aspectRatio(contentMode: .fill)
+                .cornerRadius(24)
+                .scaledToFit()
+                .frame(width: 300, height: 300)
+                .clipped()
+
                 .onTapGesture {
                     shopImagePicker.toggle()
                 }
-                .cornerRadius(24)
-            TextField("Название продукта", text: $title)
-                .padding()
-            TextField("Цена продукта", value: $price, format: .number)
-                .keyboardType(.numberPad)
-                .padding()
-            TextField("Описание продукта", text: $descript)
-                .padding()
+
+            
+                TextField("Название продукта", text: $title)
+                    .padding()
+                TextField("Цена продукта", value: $price, format: .number)
+                    .keyboardType(.numberPad)
+                    .padding()
+                TextField("Описание продукта", text: $descript)
+                    .padding()
             
             Button {
                 guard let price = price else {
